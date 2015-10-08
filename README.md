@@ -6,7 +6,7 @@ This is the Beta. Please don't use this in a production environment.
 
 In this project I use these technologies: MongoDB, Express.js, Angular.js and Node.js
 
-<a href="http://46.101.15.22:91">Live preview</a>
+[Live preview](http://46.101.15.22:91)
 
 ## Instalation
 
@@ -16,19 +16,17 @@ $ git clone <repo URL>
 
 ## Server
 
-Dependences
+### Dependences
 
-- Access to a MongoDB database. 
+Access to a MongoDB database. 
 
-[Configuration file:](server/app.js#L15)
+[Configuration file](server/app.js#L15)
 
 ```
 mongoose.connect('mongodb://localhost:27017/blackjack');
 ```
 
-- Node.js
-
-- npm
+Node.js and npm.
 
 ```sh
 $ cd client
@@ -36,20 +34,20 @@ $ npm install
 $ node bin/www
 ```
 
-- Modules
+### Modules:
 
-[See all dependencies]:(server/package.json)
+[See all dependencies](server/package.json)
 
 ## Client
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.12.1.
 
-- Build & development
+### Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
 
-- Testing
+### Testing
 
 Running `grunt test` will run the unit tests with karma.
 
@@ -57,7 +55,7 @@ Running `grunt test` will run the unit tests with karma.
 
 ### User
 
-[Users model]:(server/models/user.js)
+[Users model](server/models/user.js)
 
 Sample:
 
@@ -80,7 +78,7 @@ Sample:
 
 ### Match
 
-[Matches model]:(server/models/match.js)
+[Matches model](server/models/match.js)
 
 Sample:
 
@@ -110,7 +108,7 @@ Sample:
 
 ### Hands
 
-[Hands model]:(server/models/hand.js)
+[Hands model](server/models/hand.js)
 
 Sample:
 
@@ -155,6 +153,12 @@ Sample:
 ## Routes in Server
 
 [All routes](server/routes/blackjack.js)
+
+## Client configuration
+
+[See this file](client/app/scripts/services/blackjackservice.js#L17-20)
+
+## Screenshots
 
 
 
