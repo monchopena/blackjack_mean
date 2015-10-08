@@ -1,26 +1,23 @@
-
-
-
-
-
 <h3>Best of {{ match.best }}</h3>
+
 <h3>SCORE: Computer {{ match.score_computer }} / You {{ match.score_human }}</h3>
 
-<h4>Computer cards: </h4>
+<h4>Computer cards <span ng-show="cardShow">({{ computer_points }})</span>:</h4>
 
 <span ng-repeat-start="card in computer" ng-if="$first" big>
-    <img ng-hide="cardShow" src="images/cards/back.png" width="175px">
-    <img ng-show="cardShow" ng-src="images/cards/{{ card.img }}" width="175px">
+	<img ng-hide="cardShow" src="images/cards/back.png" width="175px">
+	<img ng-show="cardShow" ng-src="images/cards/{{ card.img }}" width="175px">
 </span>
 <span ng-repeat-end ng-if="!$first">
     <img ng-src="images/cards/{{ card.img }}" width="175px">
 </span>
 
-<h4>Your cards: </h4>
+<h4>Your cards ({{ human_points }}): </h4>
 
 <span ng-repeat="card in human">
 	<img ng-src="images/cards/{{ card.img }}" width="175px">
 </span>
+
 <img class="img-transparent" ng-show="showNextCard" ng-src="images/cards/{{ cards[turn].img }}" width="175px">
 
 <div ng-show="showButtons">
@@ -28,7 +25,6 @@
 		<a style="margin-top: 5%; margin-bottom: 5%;" ng-click="stand()" class="btn btn-primary">Stand</a>
 		<a style="margin-left: 5px; margin-top: 5%; margin-bottom: 5%;" ng-click="hit()" class="btn btn-warning">Hit</a>
 	</p>
-
 	<p>
 		<label>Cheat mode:
 	    <input type="checkbox" ng-model="cheatMode" ng-change="change()">

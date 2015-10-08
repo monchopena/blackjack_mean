@@ -100,3 +100,8 @@ body {
 .best-input {
   width: 30px;
 }
+
+.logo {
+  margin-bottom: 15px;
+  text-align: center;
+}

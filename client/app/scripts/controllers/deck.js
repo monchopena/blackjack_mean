@@ -58,9 +58,9 @@ angular.module('blackjackApp')
 		  			}
 		  		}
 
-		  		console.log('### Score ###');
-		  		console.log('computer_points: '+$scope.computer_points);
-		  		console.log('human_points: '+$scope.human_points);
+		  		//console.log('### Score ###');
+		  		//console.log('computer_points: '+$scope.computer_points);
+		  		//console.log('human_points: '+$scope.human_points);
 		  		
 		        if ($scope.match.finished === 1) {
 		        	$scope.finishedMatch();
@@ -85,15 +85,15 @@ angular.module('blackjackApp')
 
 	    	BlackJackService.updateHand(id_hand, card, 'human').success(function(data) {
 		      if (!data.error_code) {
-		        console.log(JSON.stringify(data.result));
+		        //console.log(JSON.stringify(data.result));
 		        $scope.human.push(card);
 				
 		        $scope.human_points = BlackJackService.getPoints($scope.human);
 		        $scope.turn += 1;
 
-		        console.log('###Score# hit##');
-	  			console.log('computer_points: '+$scope.computer_points);
-	  			console.log('human_points: '+$scope.human_points);
+		        //console.log('###Score# hit##');
+	  			//console.log('computer_points: '+$scope.computer_points);
+	  			//console.log('human_points: '+$scope.human_points);
 
 		        if ($scope.human_points === 21) {
 	  				$scope.cardShow = true;
@@ -124,9 +124,9 @@ angular.module('blackjackApp')
 		        $scope.computer_points = BlackJackService.getPoints($scope.computer);
 				$scope.turn += 1;
 
-				console.log('@@@core dealer@@@');
-	  			console.log('computer_points: '+$scope.computer_points);
-	  			console.log('human_points: '+$scope.human_points);
+				//console.log('@@@Score dealer@@@');
+	  			//console.log('computer_points: '+$scope.computer_points);
+	  			//console.log('human_points: '+$scope.human_points);
 
 	  			if ($scope.computer_points >= $scope.human_points && $scope.computer_points <= 21) {
 	  				$scope.computerWin();
@@ -156,9 +156,9 @@ angular.module('blackjackApp')
 	    	$scope.cardShow = true;
 
 	    	//$scope.dealerTurn();
-	    	console.log('###Score# stand##');
-	  		console.log('computer_points: '+$scope.computer_points);
-	  		console.log('human_points: '+$scope.human_points);
+	    	//console.log('###Score# stand##');
+	  		//console.log('computer_points: '+$scope.computer_points);
+	  		//console.log('human_points: '+$scope.human_points);
 
 	    	if ($scope.computer_points >= $scope.human_points) {
 	    		$scope.computerWin();
