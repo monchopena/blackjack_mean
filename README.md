@@ -185,12 +185,13 @@ We only required an username and authorize with a cookie, a very simple method o
 - Stand, Hit, ...
 - Don't forget try "Cheat Mode" :-)
 
-## TOOD
+## TODO
 
 - Implement AngularJS Authentication with JWT
 - Login with email and password
 - Play human vs human using Socket.IO
 - Improve design
+- Timeouts in Deck
 - ...
 
 
