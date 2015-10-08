@@ -154,11 +154,47 @@ Sample:
 
 [All routes](server/routes/blackjack.js)
 
+## Deck code
+
+[This code control the match](client/app/scripts/controllers/deck.js)
+
 ## Client configuration
 
 [See this file](client/app/scripts/services/blackjackservice.js#L17-20)
 
 ## Screenshots
+
+### Login page:
+
+![alt tag](https://raw.githubusercontent.com/monchopena/blackjack_mean/master/client/screenshots/login.png)
+
+We only required an username and authorize with a cookie, a very simple method only for TESTS.
+
+### Dashboard
+
+![alt tag](https://raw.githubusercontent.com/monchopena/blackjack_mean/master/client/screenshots/dashboard.png)
+
+- Statics
+- New game (You can choose "Best of [number]")
+- Unfinished games: app loads old games.
+
+### Deck
+
+![alt tag](https://raw.githubusercontent.com/monchopena/blackjack_mean/master/client/screenshots/deck.png)
+
+- Stand, Hit, ...
+- Don't forget try "Cheat Mode" :-)
+
+## TOOD
+
+- Implement AngularJS Authentication with JWT
+- Login with email and password
+- Play human vs human using Socket.IO
+- Improve design
+- ...
+
+
+
 
 
 
