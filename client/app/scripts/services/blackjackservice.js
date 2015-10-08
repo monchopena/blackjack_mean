@@ -15,8 +15,9 @@ angular.module('blackjackApp')
     var options = {};
 
     options.domain='localhost';
+    //options.domain='46.101.15.22';
     options.base_http='http';
-    options.port='3000';
+    options.port='3001';
 
     options.base_url=options.base_http+'://'+options.domain+':'+options.port+'/blackjack';
 
