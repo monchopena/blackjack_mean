@@ -1,0 +1,61 @@
+
+
+
+
+
+<h3>Best of {{ match.best }}</h3>
+<h3>SCORE: Computer {{ match.score_computer }} / You {{ match.score_human }}</h3>
+
+<h4>Computer cards: </h4>
+
+<span ng-repeat-start="card in computer" ng-if="$first" big>
+    <img ng-hide="cardShow" src="images/cards/back.png" width="175px">
+    <img ng-show="cardShow" ng-src="images/cards/{{ card.img }}" width="175px">
+</span>
+<span ng-repeat-end ng-if="!$first">
+    <img ng-src="images/cards/{{ card.img }}" width="175px">
+</span>
+
+<h4>Your cards: </h4>
+
+<span ng-repeat="card in human">
+	<img ng-src="images/cards/{{ card.img }}" width="175px">
+</span>
+<img class="img-transparent" ng-show="showNextCard" ng-src="images/cards/{{ cards[turn].img }}" width="175px">
+
+<div ng-show="showButtons">
+	<p>
+		<a style="margin-top: 5%; margin-bottom: 5%;" ng-click="stand()" class="btn btn-primary">Stand</a>
+		<a style="margin-left: 5px; margin-top: 5%; margin-bottom: 5%;" ng-click="hit()" class="btn btn-warning">Hit</a>
+	</p>
+
+	<p>
+		<label>Cheat mode:
+	    <input type="checkbox" ng-model="cheatMode" ng-change="change()">
+	  </label>
+	</p>
+</div>
+
+<div ng-show="youLose">
+<h2 style="color:red;">You Lose!</h2>
+</div>
+
+<div ng-show="youWin">
+<h2 style="color:blue;">You Win!</h2>
+</div>
+
+<div ng-show="nextHand">
+	<p>
+		<a style="margin-top: 5%; margin-bottom: 5%;" ng-click="goHand()" class="btn btn-primary">Next Hand</a>
+	</p>
+</div>
+
+<div ng-show="textFinishid">
+	<p style="color: green; margin-top: 30px;">
+		This match is finish, please go to Dashboard and see your statics.
+	</p>
+</div>
+
+<p>
+<a style="margin-top: 5%; margin-bottom: 5%;" ng-click="goDashboard()" class="btn btn-success">Return Dashboard</a>
+</p>

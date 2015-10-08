@@ -1,0 +1,61 @@
+
+
+<h2>Welcome <span class="capitalized">{{ dashboard.username }}!</span></h2>
+
+<h3>Your statics</h3>
+
+<div class="table-responsive">          
+	<table class="table">
+	<thead>
+	  <tr>
+	    <th>Won</th>
+	    <th>Lost</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>{{ dashboard.won }}</td>
+	    <td>{{ dashboard.lost }}</td>
+	  </tr>
+	</tbody>
+	</table>
+</div>
+
+
+<p>
+Play best of: <input class="best-input" type="text" ng-model="best"/>
+<a style="margin-top: 5%; margin-bottom: 5%;" ng-click="newMatch(best)" class="btn btn-success">New Match</a>
+</p>
+
+
+
+<div ng-show="showMatches">
+
+  <h3>Unfinished Matches</h3>
+
+  <div class="table-responsive">          
+	  <table class="table">
+	    <thead>
+	      <tr>
+	        <th>Time</th>
+	        <th>Computer</th>
+	        <th>You</th>
+	        <th>Action</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr ng-repeat="match in dashboard.matches">
+	        <td><span am-time-ago="match.created"></span></td>
+	        <td>{{ match.score_computer }}</td>
+	        <td>{{ match.score_human }}</td>
+	        <td><a style="margin-top: 1%; margin-bottom: 1%;" ng-click="goMatch(match._id, match.latest_hand)" class="btn btn-warning">Go!</a></td>
+	      </tr>
+	    </tbody>
+	  </table>
+  </div>
+
+</div>
+
+<p>
+<a style="margin-top: 5%; margin-bottom: 5%;" ng-click="logout()" class="btn btn-danger">Logout</a>
+</p>
